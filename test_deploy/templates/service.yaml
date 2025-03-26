@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-deploy
+  namespace: test-deploy
+spec:
+  selector:
+    app.kubernetes.io/name: test-deploy
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: http-web-svc
